@@ -64,7 +64,7 @@ func TestAvailableWebhooks(t *testing.T) {
 	}
 	wb.Zabbix = &zabbix.ZabbixWebhook{Path: "/zabbix"}
 	expected = append(expected, wb.Zabbix)
-	if !reflect.DeepEqual(wb.AvailableWebhooks(), expected) {
-		t.Errorf("expected to be %v.\nGot %v", expected, wb.AvailableWebhooks())
+	if !reflect.DeepEqual(wb.availableWebhooks(), expected) {
+		t.Errorf("expected to be %v.\nGot %v", expected, wb.availableWebhooks())
 	}
 }
